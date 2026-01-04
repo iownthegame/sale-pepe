@@ -17,10 +17,10 @@ export default function TabBar() {
   ];
 
   return (
-    <nav className="fixed bottom-0 left-0 right-0 h-20 border-t border-white/10 backdrop-blur-md pb-4 z-50">
+    <nav className="fixed bottom-0 left-0 right-0 h-20 border-t border-white/10 backdrop-blur-md pb-0 z-50">
       <div className="flex h-full items-center justify-around px-4">
         {tabs.map((tab) => {
-          const isActive = pathname === tab.href;
+          const isActive = pathname === tab.href || pathname === `${tab.href}/`;
           const Icon = tab.icon;
 
           return (
@@ -29,7 +29,7 @@ export default function TabBar() {
               href={tab.href}
               className={cn(
                 "flex flex-col items-center gap-1 transition-all duration-200",
-                isActive ? "text-sale" : "text-gray-500"
+                isActive ? "text-foreground" : "text-gray-500"
               )}
             >
               <Icon size={22} strokeWidth={isActive ? 2.5 : 2} />
@@ -37,9 +37,9 @@ export default function TabBar() {
                 {tab.name}
               </span>
               {/* Optional: Small dot indicator for active tab */}
-              {isActive && (
-                <div className="absolute bottom-2 w-1 h-1 bg-sale rounded-full" />
-              )}
+              {/* {isActive && (
+                <div className="absolute bottom-2 w-1 h-1 bg-foreground rounded-full" />
+              )} */}
             </Link>
           );
         })}
