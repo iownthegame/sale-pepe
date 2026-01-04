@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { Search, CookingPot, ChefHat, ShoppingBag } from "lucide-react";
+import { BookSearch, CookingPot, BookMarked, ShoppingBasket } from "lucide-react";
 import { cn } from "@/lib/utils";
 
 export default function TabBar() {
@@ -11,9 +11,9 @@ export default function TabBar() {
   // Define our tabs in an array to keep the code clean
   const tabs = [
     { name: "Home", href: "/", icon: CookingPot },
-    { name: "Search", href: "/search", icon: Search },
-    { name: "Saved", href: "/saved", icon: ChefHat },
-    { name: "Grocery", href: "/grocery", icon: ShoppingBag },
+    { name: "Search", href: "/search", icon: BookSearch },
+    { name: "Saved", href: "/saved", icon: BookMarked },
+    // { name: "Grocery", href: "/grocery", icon: ShoppingBasket },
   ];
 
   return (

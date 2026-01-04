@@ -2,7 +2,6 @@ import recipesData from "@/data/recipes.json";
 import { Recipe } from "@/types/recipe";
 import { Clock, Users, ChevronLeft, Flame, Utensils, ListChecks, ChefHat, CheckCircle2 } from "lucide-react";
 import Image from "next/image";
-import Link from "next/link";
 import { notFound } from "next/navigation";
 
 // Cast the JSON data to our Recipe array type

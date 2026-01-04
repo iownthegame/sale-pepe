@@ -13,7 +13,7 @@ export default function Home() {
       {/* Header Section */}
       <header className="space-y-1">
         <h1 className="text-3xl font-bold tracking-tight text-foreground">
-          Secret Recipes
+          Our secret recipes
         </h1>
         <p className="text-gray-500 text-sm font-medium">
           Welcome back, Chef.
