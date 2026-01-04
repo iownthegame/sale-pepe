@@ -25,7 +25,7 @@ export default function Home() {
         {recipes.map((recipe) => (
           <Link
             key={recipe.id}
-            href={`/recipe/${recipe.slug}`}
+            href={`/recipes/${recipe.slug}`}
             className="group block bg-card rounded-[2rem] border border-white/5 overflow-hidden transition-all active:scale-[0.98]"
           >
             {/* Image Container */}

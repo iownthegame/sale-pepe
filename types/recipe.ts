@@ -61,6 +61,7 @@ export interface Recipe {
   servings: number;
   mainImage: string;
   images: string[];
+  course: Course;
   dietaries: Dietary[];
   categories: Category[];
   duration: RecipeDuration;
