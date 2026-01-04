@@ -1,4 +1,4 @@
-import { ChefHat } from "lucide-react";
+import { ChefHat, Carrot } from "lucide-react";
 export default function AboutPage() {
   return (
     <main className="min-h-screen bg-background text-foreground selection:bg-foreground selection:text-background">
@@ -46,7 +46,7 @@ export default function AboutPage() {
           </div>
 
           <div className="flex gap-6 items-start">
-            <ChefHat size={40} className="opacity-30"></ChefHat>
+            <Carrot size={40} className="opacity-30"></Carrot>
             <div>
               <h3 className="text-xl font-bold mb-2">Hui-Yu</h3>
               <p className="text-foreground/60">Software Engineer. Bad at cooking. Love to eat what Camilla cooks. Currently learning LLM to <del>not get replaced by AI</del> become a modern developer.</p>
