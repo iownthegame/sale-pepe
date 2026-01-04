@@ -1,0 +1,576 @@
+[
+  {
+    "id": "1",
+    "slug": "thai-basil-chicken-stir-fry",
+    "title": "Thai Basil Chicken Stir-Fry",
+    "description": "If you have never made this at home, you are missing out - it’s fast and flavour-packed.",
+    "sourceUrl": "https://www.instagram.com/reels/DPXevB3Cewe/",
+    "chef": {
+      "name": "Brendan Pang",
+      "instagramUrl": "https://www.instagram.com/brendan_pang",
+      "websiteUrl": ""
+    },
+    "servings": 2,
+    "mainImage": "https://scontent-iad3-2.cdninstagram.com/v/t51.82787-15/558886270_18321224719243061_1976008347831203948_n.jpg?stp=dst-jpg_e15_tt6&_nc_cat=106&ig_cache_key=MzczNTU4OTU4OTEzNDk5NDQ2MjE4MzIxMjI0NzE2MjQzMDYx.3-ccb7-5&ccb=7-5&_nc_sid=58cdad&efg=eyJ2ZW5jb2RlX3RhZyI6InhwaWRzLjMyMTR4NTcxMi5zZHIuQzMifQ%3D%3D&_nc_ohc=T5Rdx4cHwWkQ7kNvwHnVWaa&_nc_oc=AdnxHjBCasSK_siHo0EsE4_qm2dbx4oUP40HXGyPTl9_kWgLGzRTHtIgb6sFHiDyopY6ZQ_-31Z0M4nZfGPKtiAs&_nc_ad=z-m&_nc_cid=0&_nc_zt=23&_nc_ht=scontent-iad3-2.cdninstagram.com&_nc_gid=I2sTtrL8NnYkduaJygRC_g&oh=00_AfolMusuNRbaQOkUOOspDGPyDGkXj_hBCz_PZpAie2tkAA&oe=6960456C",
+    "images": [],
+    "course": "Main",
+    "dietaries": ["Meat", "Lactose-Free"],
+    "categories": ["Asian", "Quick", "Meat"],
+    "duration": {
+      "prep": 30,
+      "cook": 20,
+      "total": 50
+    },
+    "ingredients": [
+      { "item": "Chicken thigh, chopped", "amount": 500, "unit": "g" },
+      { "item": "Garlic, crushed", "amount": 6, "unit": "clove" },
+      { "item": "Thai chillies, sliced", "amount": 3, "unit": "pinch" },
+      { "item": "Chicken stock", "amount": 100, "unit": "ml" },
+      { "item": "Thai basil leaves", "amount": 20, "unit": "g" },
+      { "item": "Light soy sauce", "amount": 1, "unit": "tbsp" },
+      { "item": "Dark soy sauce", "amount": 2, "unit": "tbsp" },
+      { "item": "Oyster sauce", "amount": 1, "unit": "tbsp" },
+      { "item": "Fish sauce", "amount": 2, "unit": "tbsp" },
+      { "item": "Brown sugar", "amount": 1.5, "unit": "tbsp" },
+      { "item": "Taiwanese rice", "amount": 2, "unit": "cup" },
+      { "item": "Eggs", "amount": 2, "unit": "pinch" }
+    ],
+    "instructions": [
+      "Mix the sauce ingredients together in a small bowl and set aside.",
+      "Heat 2 tbsp of oil in a hot wok, then add the chicken and stir-fry for 2-3 minutes until it starts to brown.",
+      "Add the garlic and chillies, and cook for another 2 minutes until fragrant.",
+      "Pour in the sauce and chicken stock. Stir-fry until it thickens and coats the chicken (about 2-3 minutes).",
+      "Toss through the Thai basil and extra chilly if you like. Cook just until the basil wilts.",
+      "Serve hot with steamed rice and a crispy fried egg on the top."
+    ]
+  },
+  {
+    "id": "2",
+    "slug": "spicy-honey-garlic-tofu",
+    "title": "Spicy Honey Garlic Tofu",
+    "description": "Crispy cornstarch-coated tofu tossed in a sticky, sweet, and spicy gochujang glaze. Even meat-lovers won't miss the chicken with this one!",
+    "sourceUrl": "https://cjeatsrecipes.com/spicy-honey-garlic-tofu/",
+    "chef": {
+      "name": "Chris Joe",
+      "instagramUrl": "https://www.instagram.com/cj.eats_/",
+      "websiteUrl": "https://cjeatsrecipes.com/"
+    },
+    "servings": 4,
+    "mainImage": "https://cjeatsrecipes.com/wp-content/uploads/2023/11/Spicy-Honey-Garlic-Tofu-plated-with-rice.jpg",
+    "images": [],
+    "course": "Main",
+    "dietaries": ["Vegetarian", "Gluten-Free", "Lactose-Free"],
+    "categories": ["Asian", "Healthy", "Quick"],
+    "duration": {
+      "prep": 15,
+      "cook": 15,
+      "total": 30
+    },
+    "ingredients": [
+      { "item": "Extra firm tofu, 1-inch cubes", "amount": 450, "unit": "g" },
+      { "item": "Cornstarch", "amount": 0.25, "unit": "cup" },
+      { "item": "Kosher salt", "amount": 1, "unit": "tsp" },
+      { "item": "Black pepper", "amount": 0.5, "unit": "pinch" },
+      { "item": "Garlic powder", "amount": 0.5, "unit": "tsp" },
+      { "item": "Neutral oil (for frying)", "amount": 0.5, "unit": "cup" },
+      { "item": "Garlic, minced", "amount": 10, "unit": "clove" },
+      { "item": "Honey", "amount": 2, "unit": "tbsp" },
+      { "item": "Gochujang (Korean chili paste)", "amount": 1, "unit": "tbsp" },
+      { "item": "Brown sugar", "amount": 2, "unit": "tbsp" },
+      { "item": "Soy sauce (low sodium)", "amount": 3, "unit": "tbsp" },
+      { "item": "Hot water", "amount": 0.25, "unit": "cup" }
+    ],
+    "instructions": [
+      "Pat the tofu cubes completely dry with paper towels (moisture is the enemy of crispiness).",
+      "In a large bowl, season tofu with salt, pepper, and garlic powder. Sprinkle with cornstarch and toss until evenly coated.",
+      "Heat oil in a wok or large pan over medium-high heat. Fry tofu in a single layer for 2-3 minutes per side until golden and crisp. Drain on a wire rack.",
+      "Remove most oil from the pan, leaving about 1 tbsp. Sauté minced garlic for 30 seconds until fragrant.",
+      "Add honey, gochujang, brown sugar, soy sauce, and hot water. Simmer until the sauce thickens enough to coat the back of a spoon.",
+      "Add the crispy tofu back to the pan and toss quickly to glaze every piece. Garnish with scallions and sesame seeds if desired."
+    ]
+  },
+  {
+    "id": "3",
+    "slug": "shrimp-yaki-udon",
+    "title": "Shrimp Yaki Udon",
+    "description": "Chewy udon noodles tossed with plump shrimp and a savory, umami-rich stir-fry sauce. A 15-minute weeknight hero.",
+    "sourceUrl": "https://daigasikfaan.co/yaki-udon/",
+    "chef": {
+      "name": "Karen Law",
+      "instagramUrl": "https://www.instagram.com/daigasikfaan/",
+      "websiteUrl": "https://daigasikfaan.co/"
+    },
+    "servings": 2,
+    "mainImage": "https://i0.wp.com/daigasikfaan.co/wp-content/uploads/2023/04/IMG_4579.jpg?ssl=1",
+    "images": [],
+    "course": "Main",
+    "dietaries": ["Pescatarian", "Lactose-Free"],
+    "categories": ["Asian", "Quick", "Pasta"],
+    "duration": {
+      "prep": 10,
+      "cook": 5,
+      "total": 15
+    },
+    "ingredients": [
+      { "item": "Frozen or Fresh Udon noodles", "amount": 400, "unit": "g" },
+      { "item": "Large shrimp, peeled and deveined", "amount": 200, "unit": "g" },
+      { "item": "Cabbage, shredded", "amount": 100, "unit": "g" },
+      { "item": "Carrot, julienned", "amount": 0.5, "unit": "cup" },
+      { "item": "Onion, sliced", "amount": 0.5, "unit": "cup" },
+      { "item": "Garlic, minced", "amount": 2, "unit": "clove" },
+      { "item": "Soy sauce", "amount": 2, "unit": "tbsp" },
+      { "item": "Oyster sauce", "amount": 1, "unit": "tbsp" },
+      { "item": "Mirin", "amount": 1, "unit": "tbsp" },
+      { "item": "Dark soy sauce (for color)", "amount": 1, "unit": "tsp" },
+      { "item": "Neutral oil", "amount": 2, "unit": "tbsp" }
+    ],
+    "instructions": [
+      "Prepare the udon noodles according to package instructions (usually soaking in hot water for 2 mins), then drain and set aside.",
+      "In a small bowl, whisk together the soy sauce, oyster sauce, mirin, and dark soy sauce.",
+      "Heat oil in a wok or large skillet over high heat. Sear the shrimp until pink and just cooked through. Remove and set aside.",
+      "In the same pan, stir-fry the onion, carrots, and cabbage for 2-3 minutes until slightly softened but still vibrant.",
+      "Add the garlic and cooked udon noodles. Pour the sauce over the noodles and toss vigorously over high heat to emulsify.",
+      "Add the shrimp back in, toss for another 30 seconds until the sauce coats everything evenly, and serve immediately."
+    ]
+  },
+  {
+    "id": "4",
+    "slug": "baked-halloumi-fennel-carob-syrup",
+    "title": "Baked Halloumi with Fennel and Carob Syrup",
+    "description": "A wonderful combination of salty halloumi, aniseedy fennel, and the deep, honey-like sweetness of carob syrup.",
+    "sourceUrl": "https://ottolenghi.co.uk/pages/recipes/baked-halloumi-fennel-carob-syrup",
+    "chef": {
+      "name": "Yotam Ottolenghi",
+      "instagramUrl": "https://www.instagram.com/ottolenghi/",
+      "websiteUrl": "https://ottolenghi.co.uk/"
+    },
+    "servings": 4,
+    "mainImage": "https://ottolenghi.co.uk/cdn/shop/files/Baked_halloumi_with_fennel_and_carob_syrup_1.jpg?v=1753197186",
+    "images": [],
+    "course": "Starter",
+    "dietaries": ["Vegetarian", "Gluten-Free"],
+    "categories": ["Healthy", "Quick"],
+    "duration": {
+      "prep": 15,
+      "cook": 20,
+      "total": 35
+    },
+    "ingredients": [
+      { "item": "Fennel bulbs, trimmed and sliced into 1cm wedges", "amount": 2, "unit": "clove" },
+      { "item": "Olive oil", "amount": 3, "unit": "tbsp" },
+      { "item": "Halloumi, sliced into 1cm thick pieces", "amount": 250, "unit": "g" },
+      { "item": "Carob syrup (or honey as substitute)", "amount": 1.5, "unit": "tbsp" },
+      { "item": "Lemon juice", "amount": 1, "unit": "tbsp" },
+      { "item": "Dried oregano", "amount": 1, "unit": "tsp" },
+      { "item": "Chilli flakes", "amount": 0.5, "unit": "tsp" },
+      { "item": "Salt", "amount": 1, "unit": "pinch" },
+      { "item": "Black pepper", "amount": 1, "unit": "pinch" }
+    ],
+    "instructions": [
+      "Preheat the oven to 220°C (425°F).",
+      "Toss the fennel wedges with 2 tbsp of olive oil, salt, and pepper. Spread on a baking tray and roast for 15-20 minutes until softened and charred.",
+      "Place the halloumi slices on top of the roasted fennel.",
+      "In a small bowl, whisk together the remaining olive oil, carob syrup, lemon juice, dried oregano, and chilli flakes.",
+      "Drizzle the dressing over the halloumi and fennel.",
+      "Bake for another 5-8 minutes until the halloumi is golden and bubbly. Serve warm."
+    ]
+  },
+  {
+    "id": "5",
+    "slug": "marinated-and-pan-fried-tofu",
+    "title": "Marinated and Pan-Fried Tofu",
+    "description": "A simple yet incredibly flavorful vegan dish: tofu marinated in soy sauce, maple syrup, and spices, then pan-fried until golden. Perfect even for those who think they don’t like tofu!",
+    "sourceUrl": "https://www.instagram.com/p/CjkkpgRoQ7D/",
+    "chef": {
+      "name": "Carlotta | Cucina Botanica",
+      "instagramUrl": "https://www.instagram.com/cucinabotanica/",
+      "websiteUrl": ""
+    },
+    "servings": 2,
+    "mainImage": "https://scontent-iad3-2.cdninstagram.com/v/t51.71878-15/499420903_999606178827137_6269351963254099300_n.jpg?stp=dst-jpg_e15_tt6&_nc_cat=103&ig_cache_key=Mjk0NjY0MTIzODAzNTU5OTA0Mw%3D%3D.3-ccb7-5&ccb=7-5&_nc_sid=58cdad&efg=eyJ2ZW5jb2RlX3RhZyI6InhwaWRzLjk5MHgxNzYyLnNkci5DMyJ9&_nc_ohc=Bb_0I6D2m78Q7kNvwHiCMQv&_nc_oc=AdlCVlTfofgHk0Sv7GeQkVZizwcFEI1V1ySC9NAGnrUFWtgOPHvZcPXBdeYGFOLeXSbWSggymCGnwkf2IocwvCRM&_nc_ad=z-m&_nc_cid=0&_nc_zt=23&_nc_ht=scontent-iad3-2.cdninstagram.com&_nc_gid=Kf7SX5myDfT_P8ZWqFipDQ&oh=00_AfpMxCUzbg3MU6Sb7xubwm1uRX8PLX001Mf7YYOjYP0Ppg&oe=69604DF8",
+    "images": [],
+    "course": "Main",
+    "dietaries": ["Vegan"],
+    "categories": ["Asian", "Healthy", "Quick"],
+    "duration": {
+      "prep": 10,
+      "cook": 10,
+      "total": 80
+    },
+    "ingredients": [
+      { "item": "tofu", "amount": 400, "unit": "g" },
+      { "item": "soy sauce", "amount": 3, "unit": "tbsp" },
+      { "item": "maple syrup", "amount": 2, "unit": "tbsp" },
+      { "item": "white wine vinegar", "amount": 2, "unit": "tbsp" },
+      { "item": "vegetable oil (or sesame oil)", "amount": 2, "unit": "tbsp" },
+      { "item": "ground ginger", "amount": 0.5, "unit": "tsp" },
+      { "item": "sweet paprika", "amount": 0.5, "unit": "tsp" },
+      { "item": "garlic powder", "amount": 1, "unit": "pinch" }
+    ],
+    "instructions": [
+      "Drain the tofu and pat it dry with paper towels, then cut it into cubes or slices.",
+      "In a bowl, mix soy sauce, maple syrup, vinegar, oil, and all the spices.",
+      "Add the tofu to the marinade and gently toss to coat evenly.",
+      "Let marinate for at least 1 hour (less if using a vacuum container).",
+      "Heat a non-stick pan over medium-high heat and add the tofu with its marinade.",
+      "Pan-fry until the tofu is golden and the sauce slightly caramelized.",
+      "Serve immediately, on its own or with vegetables or rice."
+    ]
+  },
+  {
+    "id": "6",
+    "slug": "korean-braised-tofu-dubu-jorim",
+    "title": "Korean Braised Tofu (Dubu-jorim)",
+    "description": "A super quick and naturally vegan Korean tofu dish. Crispy pan-fried tofu simmered in a spicy, savory soy-based sauce with garlic, sesame, and gochugaru. Simple, bold, and incredibly satisfying.",
+    "sourceUrl": "https://www.instagram.com/p/DQEQ5NiAfaY/",
+    "chef": {
+      "name": "Vegen healthy plan",
+      "instagramUrl": "https://www.instagram.com/vegan.healthy.plan/",
+      "websiteUrl": ""
+    },
+    "servings": 2,
+    "mainImage": "https://scontent-iad3-1.cdninstagram.com/v/t51.82787-15/567877374_17999452994826381_4034253120378284938_n.jpg?stp=dst-jpg_e15_tt6&_nc_cat=101&ig_cache_key=Mzc0ODE5NTA5MDE2MjY0NDYzMjE3OTk5NDUyOTg4ODI2Mzgx.3-ccb7-5&ccb=7-5&_nc_sid=58cdad&efg=eyJ2ZW5jb2RlX3RhZyI6InhwaWRzLjU0MHg5NjAuc2RyLkMzIn0%3D&_nc_ohc=4uD9hheODjoQ7kNvwEhiphr&_nc_oc=AdlliLEUjT9n6tIYvSwx3gwSvvwcmkmk6quNaeLrjn1MjidKK6H7Hw5XzYHH3KjgwIm72FC3nOnJuLPRXh3Y2GXM&_nc_ad=z-m&_nc_cid=0&_nc_zt=23&_nc_ht=scontent-iad3-1.cdninstagram.com&_nc_gid=Kf7SX5myDfT_P8ZWqFipDQ&oh=00_Afq3ukd2qEkSXGuI8z91HqJhucN9vEsu5RhcfmEuhuOzCA&oe=69602157",
+    "images": [],
+    "course": "Main",
+    "dietaries": ["Vegan"],
+    "categories": ["Asian", "Healthy", "Quick"],
+    "duration": {
+      "prep": 10,
+      "cook": 10,
+      "total": 20
+    },
+    "ingredients": [
+      { "item": "tofu", "amount": 400, "unit": "g" },
+      { "item": "oil for frying", "amount": 2, "unit": "tbsp" },
+      { "item": "onion (optional, sliced)", "amount": 1, "unit": "cup" },
+      { "item": "sesame oil", "amount": 1, "unit": "tsp" },
+
+      { "item": "water", "amount": 80, "unit": "ml" },
+      { "item": "soy sauce", "amount": 4, "unit": "tbsp" },
+      { "item": "sugar", "amount": 1, "unit": "tsp" },
+      { "item": "Korean red pepper flakes (gochugaru)", "amount": 2, "unit": "tbsp" },
+      { "item": "sesame seeds", "amount": 1, "unit": "tbsp" },
+      { "item": "garlic", "amount": 4, "unit": "clove" },
+      { "item": "spring onions (chopped)", "amount": 0.5, "unit": "cup" }
+    ],
+    "instructions": [
+      "Cut the tofu into thick squares and pat dry with a kitchen towel.",
+      "Finely chop the garlic and spring onions. Mix them in a bowl with water, soy sauce, sugar, gochugaru, and sesame seeds to make the sauce.",
+      "Heat oil in a pan over medium heat and fry the tofu until crispy and golden on both sides.",
+      "Add the sliced onion (if using) and pour in the sauce.",
+      "Cover with a lid and let simmer for 5–10 minutes, allowing the tofu to absorb the sauce.",
+      "Finish by drizzling with toasted sesame oil.",
+      "Serve hot with rice or as desired."
+    ]
+  },
+  {
+    "id": "7",
+    "slug": "honey-lemon-garlic-chicken",
+    "title": "Honey Lemon Garlic Chicken",
+    "description": "Make crispy, juicy Honey Lemon Garlic Chicken with a sweet and tangy glaze. Perfect for a quick, flavorful weeknight dinner that balances sweet, savory, and spicy flavors.",
+    "sourceUrl": "https://cookingwithgenius.com/honey-lemon-garlic-chicken/",
+    "chef": {
+      "name": "Genio Ng",
+      "instagramUrl": "https://www.instagram.com/geniuseatss/",
+      "websiteUrl": "https://cookingwithgenius.com/"
+    },
+    "servings": 2,
+    "mainImage": "https://cookingwithgenius.com/wp-content/uploads/2025/01/0Z8A4856.jpg",
+    "images": [
+      "https://cookingwithgenius.com/wp-content/uploads/2023/11/Honey-Lemon-Garlic-Chicken.jpg"
+    ],
+    "course": "Main",
+    "dietaries": [
+      "Meat"
+    ],
+    "categories": [
+      "Asian",
+      "Quick",
+      "Meat"
+    ],
+    "duration": {
+      "prep": 10,
+      "cook": 20,
+      "total": 30
+    },
+    "ingredients": [
+      {
+        "item": "chicken thighs, skin on and boneless",
+        "amount": 2,
+        "unit": "clove"
+      },
+      {
+        "item": "salt",
+        "amount": 1,
+        "unit": "pinch"
+      },
+      {
+        "item": "black pepper",
+        "amount": 0.5,
+        "unit": "tsp"
+      },
+      {
+        "item": "cornstarch",
+        "amount": 0.5,
+        "unit": "cup"
+      },
+      {
+        "item": "butter",
+        "amount": 3,
+        "unit": "tbsp"
+      },
+      {
+        "item": "garlic, minced",
+        "amount": 5,
+        "unit": "clove"
+      },
+      {
+        "item": "soy sauce",
+        "amount": 2,
+        "unit": "tbsp"
+      },
+      {
+        "item": "mirin",
+        "amount": 2,
+        "unit": "tbsp"
+      },
+      {
+        "item": "honey",
+        "amount": 2,
+        "unit": "tbsp"
+      },
+      {
+        "item": "lemon juice",
+        "amount": 1,
+        "unit": "cup"
+      },
+      {
+        "item": "lemon zest",
+        "amount": 0.5,
+        "unit": "tbsp"
+      },
+      {
+        "item": "paprika",
+        "amount": 0.5,
+        "unit": "tsp"
+      },
+      {
+        "item": "chili flakes",
+        "amount": 0.5,
+        "unit": "tsp"
+      }
+    ],
+    "instructions": [
+      "Season the chicken thigh with salt and pepper. Coat the chicken with cornstarch and shake off excess. Set aside.",
+      "In a pan, heat the oil over medium-high heat. Add the chicken skin side down and fry each side for 7 minutes or until golden brown. Set aside.",
+      "In a pan, heat the butter over medium heat. Once it is melted, saute the garlic until fragrant for 1 minute.",
+      "Add in soy sauce, mirin, honey, lemon juice, lemon zest, paprika, chili flakes and black pepper.",
+      "Cook the sauce until it thickens.",
+      "Add the chicken back to the pan and baste the chicken with the sauce.",
+      "Once it is done, serve with hot steamed rice, garnish with sesame seeds and chives, and enjoy!"
+    ]
+  },
+  {
+    "id": "8",
+    "slug": "fricassee-tuna-melt",
+    "title": "Fricassee Tuna Melt",
+    "description": "An unashamed beast of a sandwich in which Tunisian tuna fricassee meets the tuna melt, featuring double carbs, melted cheese, and a punchy harissa tapenade.",
+    "sourceUrl": "https://ottolenghi.co.uk/pages/recipes/fricassee-tuna-melt",
+    "chef": {
+      "name": "Yotam Ottolenghi",
+      "instagramUrl": "https://www.instagram.com/ottolenghi/",
+      "websiteUrl": "https://ottolenghi.co.uk/"
+    },
+    "servings": 4,
+    "mainImage": "https://ottolenghi.co.uk/cdn/shop/files/Fricassee_tuna_melt_2.jpg?v=1730984724",
+    "images": [],
+    "course": "Main",
+    "dietaries": [
+      "Pescatarian"
+    ],
+    "categories": [
+      "Quick",
+      "Meat"
+    ],
+    "duration": {
+      "prep": 15,
+      "cook": 20,
+      "total": 35
+    },
+    "ingredients": [
+      {
+        "item": "tuna in olive oil (drained weight, reserve oil)",
+        "amount": 200,
+        "unit": "g"
+      },
+      {
+        "item": "mayonnaise",
+        "amount": 100,
+        "unit": "g"
+      },
+      {
+        "item": "red onion, finely diced",
+        "amount": 0.5,
+        "unit": "pinch"
+      },
+      {
+        "item": "pitted black olives",
+        "amount": 150,
+        "unit": "g"
+      },
+      {
+        "item": "garlic cloves",
+        "amount": 2,
+        "unit": "clove"
+      },
+      {
+        "item": "red harissa paste",
+        "amount": 1.5,
+        "unit": "tbsp"
+      },
+      {
+        "item": "lemon juice",
+        "amount": 1.5,
+        "unit": "tbsp"
+      },
+      {
+        "item": "reserved olive oil (from tuna)",
+        "amount": 2,
+        "unit": "tbsp"
+      },
+      {
+        "item": "maple syrup or honey",
+        "amount": 0.5,
+        "unit": "tsp"
+      },
+      {
+        "item": "olive oil (for potatoes)",
+        "amount": 100,
+        "unit": "ml"
+      },
+      {
+        "item": "potato, cut into 1/2cm half-moons",
+        "amount": 300,
+        "unit": "g"
+      },
+      {
+        "item": "sourdough bread, large slices",
+        "amount": 4,
+        "unit": "pinch"
+      },
+      {
+        "item": "mozzarella, grated",
+        "amount": 200,
+        "unit": "g"
+      },
+      {
+        "item": "parsley leaves",
+        "amount": 20,
+        "unit": "g"
+      }
+    ],
+    "instructions": [
+      "Put the tuna in a bowl, break it up with a spoon, then mix in the mayo, onion, a quarter-teaspoon of salt and a few grinds of black pepper.",
+      "Put all the tapenade ingredients in a food processor and blitz to a chunky paste.",
+      "Heat the 100ml olive oil in a large non-stick frying pan over medium-high heat. Fry the potato slices for 10-12 minutes, flipping often, until golden brown. Drain on kitchen paper and season with salt.",
+      "Spread each slice of bread with a quarter of the tapenade, then top with 50g of grated mozzarella.",
+      "Divide the tuna mix between two of the slices, then top with the fried potatoes and parsley leaves.",
+      "Close the sandwiches with the remaining bread slices (tapenade and cheese side down).",
+      "Return the frying pan to medium heat and fry each sandwich for about six minutes, flipping once halfway through, until golden and the cheese has melted.",
+      "Slice in half and serve immediately."
+    ]
+  },
+  {
+    "id": "9",
+    "slug": "sauteeed-green-beans-and-tofu",
+    "title": "Sautéed Green Beans and Tofu",
+    "description": "A quick and tasty side dish or main course featuring sautéed green beans and tofu with a savory soy-ginger glaze.",
+    "sourceUrl": "https://www.instagram.com/p/Cf9XEY_Ok0I/",
+    "chef": {
+      "name": "Carlotta | Cucina Botanica",
+      "instagramUrl": "https://www.instagram.com/cucinabotanica/",
+      "websiteUrl": ""
+    },
+    "servings": 2,
+    "mainImage": "https://scontent-iad3-1.cdninstagram.com/v/t51.71878-15/496969762_1334666877838025_7460493916274324048_n.jpg?stp=dst-jpg_e15_tt6&_nc_cat=101&ig_cache_key=Mjg4MTU2MDc5MzM2NTIzNzAwMA%3D%3D.3-ccb7-5&ccb=7-5&_nc_sid=58cdad&efg=eyJ2ZW5jb2RlX3RhZyI6InhwaWRzLjg1NngxNTE2LnNkci5DMyJ9&_nc_ohc=vN9zly6eeBoQ7kNvwG_7pU5&_nc_oc=AdmtvKZpbuZ6C9SYpjVqoi2d2Y-KLmv38LaiOBI1n3ghv8CQES6xazXIKQeVAXDeBFN_Mzv_erImOdige6uy12of&_nc_ad=z-m&_nc_cid=0&_nc_zt=23&_nc_ht=scontent-iad3-1.cdninstagram.com&_nc_gid=Kf7SX5myDfT_P8ZWqFipDQ&oh=00_Afop1easnkzlltYZfAfDaymsOiLASUg-XeoxzMrtWjyplA&oe=6960435B",
+    "images": [],
+    "course": "Main",
+    "dietaries": [
+      "Vegan",
+      "Vegetarian",
+      "Lactose-Free"
+    ],
+    "categories": [
+      "Asian",
+      "Quick",
+      "Healthy"
+    ],
+    "duration": {
+      "prep": 10,
+      "cook": 15,
+      "total": 25
+    },
+    "ingredients": [
+      {
+        "item": "tofu blocks (panetti)",
+        "amount": 2,
+        "unit": "pinch"
+      },
+      {
+        "item": "green beans (fagiolini)",
+        "amount": 4,
+        "unit": "cup"
+      },
+      {
+        "item": "flour or cornstarch",
+        "amount": 2,
+        "unit": "tbsp"
+      },
+      {
+        "item": "garlic clove",
+        "amount": 1,
+        "unit": "clove"
+      },
+      {
+        "item": "fresh ginger",
+        "amount": 1,
+        "unit": "pinch"
+      },
+      {
+        "item": "soy sauce",
+        "amount": 4,
+        "unit": "tbsp"
+      },
+      {
+        "item": "sugar",
+        "amount": 1,
+        "unit": "tsp"
+      },
+      {
+        "item": "lime or lemon juice",
+        "amount": 0.5,
+        "unit": "cup"
+      },
+      {
+        "item": "chili flakes (peperoncino)",
+        "amount": 1,
+        "unit": "pinch"
+      },
+      {
+        "item": "salt",
+        "amount": 1,
+        "unit": "pinch"
+      }
+    ],
+    "instructions": [
+      "Clean the green beans and blanch them in boiling salted water for a few minutes until tender-crisp, then drain.",
+      "Cut the tofu into cubes and coat them evenly with the flour or cornstarch.",
+      "In a large pan or wok, sauté the tofu with a bit of oil until golden and crispy on all sides.",
+      "Add the blanched green beans to the pan along with the minced garlic and grated ginger.",
+      "Prepare the sauce by mixing the soy sauce, sugar, lime juice, and chili flakes in a small bowl.",
+      "Pour the sauce over the tofu and green beans, adding a splash of water if the mixture is too dry.",
+      "Toss everything over high heat for a couple of minutes until the sauce thickens and coats the ingredients perfectly.",
+      "Serve hot as a main or a flavorful side dish."
+    ]
+  }
+]
