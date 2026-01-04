@@ -3,6 +3,7 @@ import { Geist, Geist_Mono, Poppins } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/components/Navbar";
 import TabBar from "@/components/TabBar";
+import { SavedRecipesProvider } from "@/context/SavedRecipesContext";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -30,11 +31,13 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
   return (
     <html lang="en" className={poppins.variable}>
       <body className="font-sans antialiased">
-        <Navbar />
-        <main className="min-h-screen pt-16 pb-20">
-          {children}
-        </main>
-        <TabBar />
+        <SavedRecipesProvider>
+          <Navbar />
+          <main className="min-h-screen pt-16 pb-20">
+            {children}
+          </main>
+          <TabBar />
+        </SavedRecipesProvider>
       </body>
     </html>
   );
