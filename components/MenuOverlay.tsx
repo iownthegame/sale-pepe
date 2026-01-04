@@ -33,7 +33,7 @@ export default function MenuOverlay({ isOpen, onClose }: MenuOverlayProps) {
         {/* Close Button */}
         <button
           onClick={onClose}
-          className="absolute top-4 right-6 p-2 text-foreground/60 hover:text-foreground transition-colors cursor-pointer"
+          className="absolute top-4 right-6 p-2 text-foreground/60 hover:text-foreground transition-colors"
         >
           <X size={24} />
         </button>
@@ -46,7 +46,7 @@ export default function MenuOverlay({ isOpen, onClose }: MenuOverlayProps) {
                 key={item.name}
                 href={item.href}
                 onClick={onClose}
-                className="flex items-center gap-4 text-xl font-medium text-foreground/70 hover:text-foreground transition-all group cursor-pointer"
+                className="flex items-center gap-4 text-xl font-medium text-foreground/70 hover:text-foreground transition-all group"
               >
                 <span className="text-foreground/30 group-hover:text-foreground group-hover:scale-110 transition-all">
                   {item.icon}

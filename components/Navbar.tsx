@@ -32,7 +32,7 @@ export default function Navbar() {
       <div className="flex justify-end">
         <button
           onClick={() => setIsMenuOpen(true)}
-          className="p-2 text-foreground/60 hover:text-foreground transition-colors cursor-pointer"
+          className="p-2 text-foreground/60 hover:text-foreground transition-colors"
         >
           <Menu size={24} />
         </button>
