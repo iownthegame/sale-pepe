@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono, Poppins } from "next/font/google";
 import "./globals.css";
+import Navbar from "@/components/Navbar";
+import TabBar from "@/components/TabBar";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -24,17 +26,15 @@ export const metadata: Metadata = {
   description: "",
 };
 
-export default function RootLayout({
-  children,
-}: Readonly<{
-  children: React.ReactNode;
-}>) {
+export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="en">
-      <body
-        className={`${poppins.variable} ${geistSans.variable} ${geistMono.variable} antialiased`}
-      >
-        {children}
+    <html lang="en" className={poppins.variable}>
+      <body className="font-sans antialiased">
+        <Navbar />
+        <main className="min-h-screen pt-16 pb-20">
+          {children}
+        </main>
+        <TabBar />
       </body>
     </html>
   );
