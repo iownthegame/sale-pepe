@@ -27,7 +27,7 @@ export default function MenuOverlay({ isOpen, onClose }: MenuOverlayProps) {
 
       {/* Drawer Panel - Added h-screen and flex-col */}
       <div
-        className={`absolute right-0 top-0 h-screen w-[280px] bg-background border-l border-foreground/10 p-8 pt-24 transition-transform duration-500 ease-out shadow-2xl flex flex-col ${isOpen ? "translate-x-0" : "translate-x-full"
+        className={`absolute right-0 top-0 h-screen w-screen bg-background border-l border-foreground/10 p-8 pt-24 transition-transform duration-500 ease-out shadow-2xl flex flex-col ${isOpen ? "translate-x-0" : "translate-x-full"
           }`}
       >
         {/* Close Button */}
@@ -55,13 +55,6 @@ export default function MenuOverlay({ isOpen, onClose }: MenuOverlayProps) {
               </Link>
             ))}
           </nav>
-
-          {/* Footer - mt-auto now pushes this to the very bottom */}
-          <div className="mt-auto pb-8 pt-12 border-t border-foreground/5">
-            <p className="text-xs text-foreground/50 leading-relaxed italic font-light">
-              Secret family recipes, <br /> curated for your kitchen.
-            </p>
-          </div>
         </div>
       </div>
     </div>

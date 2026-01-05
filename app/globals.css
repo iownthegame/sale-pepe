@@ -29,6 +29,10 @@ body {
 }
 
 @layer base {
+  html {
+    /* This tells the browser: "I'll handle the scroll, don't try to be helpful" */
+    scroll-restoration: manual;
+  }
   button {
     cursor: pointer;
   }

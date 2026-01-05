@@ -1,9 +1,6 @@
 import recipesData from "@/data/recipes.json";
 import { Recipe } from "@/types/recipe";
 import RecipeCard from "@/components/RecipeCard";
-import Link from "next/link";
-import { Clock, Users, ChevronRight } from "lucide-react";
-import Image from "next/image"
 
 export default function Home() {
   // Cast the JSON data to our Recipe array type

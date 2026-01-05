@@ -41,7 +41,7 @@ export default function AboutPage() {
             <ChefHat size={40} className="opacity-30"></ChefHat>
             <div>
               <h3 className="text-xl font-bold mb-2">Camilla</h3>
-              <p className="text-foreground/60">Graphics designer. Love and good at cooking. Make lunch for work everyday. Currently learning Figma and paper folding technique.</p>
+              <p className="text-foreground/60">Graphics designer. Love and good at cooking. Make lunch for work everyday. Currently learning Figma and paper folding technique, but mostly obsessed with Zelda.</p>
             </div>
           </div>
 
