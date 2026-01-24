@@ -3,7 +3,8 @@ import { useState, useEffect } from "react";
 import { Recipe } from "@/types/recipe";
 import {
   Clock, Users, Flame, Utensils,
-  ListChecks, Bookmark, BookmarkCheck
+  ListChecks, Bookmark, BookmarkCheck,
+  Instagram, ExternalLink, ChefHat,
 } from "lucide-react";
 import Image from "next/image";
 import { useSavedRecipes } from "@/hooks/useSavedRecipes";
@@ -47,6 +48,52 @@ export default function RecipeClientLayout({ recipe }: { recipe: Recipe }) {
               <h1 className="text-4xl font-bold tracking-tight leading-tight">
                 {recipe.title}
               </h1>
+
+              {/* Chef Attribution & Source --- */}
+              <div className="flex items-center gap-3 pt-1">
+                <div className="h-8 w-8 rounded-full bg-foreground/10 flex items-center justify-center text-foreground/60">
+                  <ChefHat size={16} />
+                </div>
+                <div className="flex flex-col">
+                  <span className="text-[10px] uppercase tracking-tighter text-foreground/40 font-bold">
+                    Recipe by
+                  </span>
+                  <div className="flex items-center gap-2">
+                    <span className="text-sm font-semibold">{recipe.chef.name}</span>
+
+                    {/* Social & Source Icons */}
+                    <div className="flex items-center gap-2 ml-1">
+                      {recipe.chef.instagramUrl && (
+                        <a
+                          href={recipe.chef.instagramUrl}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="text-foreground/40 hover:text-pink-500 transition-colors"
+                        >
+                          <Instagram size={14} />
+                        </a>
+                      )}
+
+                      {/* Separator dot if both exist */}
+                      {recipe.chef.instagramUrl && recipe.sourceUrl && (
+                        <span className="text-foreground/10 text-[10px]">•</span>
+                      )}
+
+                      {recipe.sourceUrl && (
+                        <a
+                          href={recipe.sourceUrl}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="text-foreground/40 hover:text-foreground transition-colors"
+                          title="Original Source"
+                        >
+                          <ExternalLink size={14} />
+                        </a>
+                      )}
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
 
             <button
@@ -60,6 +107,7 @@ export default function RecipeClientLayout({ recipe }: { recipe: Recipe }) {
               )}
             </button>
           </div>
+
           <p className="text-foreground/50 leading-relaxed">{recipe.description}</p>
         </section>
 
