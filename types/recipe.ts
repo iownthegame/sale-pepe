@@ -51,6 +51,11 @@ export interface Chef {
   websiteUrl?: string;
 }
 
+export interface RecipeEmbed {
+  type: "instagram";
+  embedId: string;
+}
+
 export interface Recipe {
   id: string;
   slug: string;
@@ -67,4 +72,5 @@ export interface Recipe {
   duration: RecipeDuration;
   ingredients: Ingredient[];
   instructions: string[];
+  embed?: RecipeEmbed;
 }

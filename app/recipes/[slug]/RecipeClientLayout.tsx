@@ -7,6 +7,7 @@ import {
   Instagram, ExternalLink, ChefHat,
 } from "lucide-react";
 import Image from "next/image";
+import RecipeEmbedVideo from "@/components/RecipeEmbedVideo";
 import { useSavedRecipes } from "@/hooks/useSavedRecipes";
 
 export default function RecipeClientLayout({ recipe }: { recipe: Recipe }) {
@@ -169,6 +170,8 @@ export default function RecipeClientLayout({ recipe }: { recipe: Recipe }) {
             ))}
           </div>
         </section>
+
+        {recipe.embed && <RecipeEmbedVideo embed={recipe.embed} />}
       </div>
     </div>
   );
