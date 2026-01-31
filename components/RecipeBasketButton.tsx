@@ -13,7 +13,7 @@ export default function RecipeBasketButton({ recipe }: { recipe: Recipe }) {
     if (isInList) {
       removeRecipe(recipe.id);
     } else {
-      addToCard(recipe.id, recipe.title, recipe.ingredients);
+      addToCard(recipe.id, recipe.title, recipe.slug, recipe.ingredients);
     }
   };
 

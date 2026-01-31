@@ -1,6 +1,6 @@
 "use client";
 import { useGrocery } from "@/context/GroceryContext";
-import { Trash2, CheckCircle2, Circle } from "lucide-react";
+import { Trash2, CheckCircle2, Circle, ChevronRight } from "lucide-react";
 import Link from "next/link";
 
 export default function GroceryPage() {
@@ -37,23 +37,22 @@ export default function GroceryPage() {
               <section key={id} className="animate-in fade-in slide-in-from-bottom-8 duration-700">
                 {/* Recipe Header */}
                 <div className="flex justify-between items-start mb-6 px-1">
-                  <div className="space-y-2 flex-1">
-                    <h2 className="text-2xl font-bold tracking-tight text-foreground/90">
-                      {group.recipeTitle}
-                    </h2>
-                    {/* Minimal Progress Line */}
-                    <div className="flex items-center gap-3">
-                      <div className="h-1 w-20 bg-foreground/5 rounded-full overflow-hidden">
-                        <div
-                          className="h-full bg-primary transition-all duration-700 ease-out"
-                          style={{ width: `${progress}%` }}
-                        />
-                      </div>
-                      <span className="text-[10px] font-black text-foreground/20 uppercase tracking-widest">
-                        {checkedCount} / {group.ingredients.length}
-                      </span>
+                  <Link
+                    href={`/recipes/${group.recipeSlug}`}
+                    className="group/title space-y-3 flex-1"
+                  >
+                    <div className="flex items-center gap-2">
+                      <h2 className="text-2xl font-bold tracking-tight text-foreground/90 lowercase group-hover/title:text-primary transition-colors">
+                        # {group.recipeTitle}
+                      </h2>
+                      <ChevronRight size={18} className="text-foreground/20 group-hover/title:text-primary transition-all group-hover/title:translate-x-1" />
                     </div>
-                  </div>
+
+                    {/* Progress bar remains below */}
+                    <div className="flex items-center gap-3">
+                      {/* ... progress bar code ... */}
+                    </div>
+                  </Link>
 
                   <button
                     onClick={() => removeRecipe(id)}

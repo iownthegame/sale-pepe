@@ -9,12 +9,13 @@ interface GroceryItem extends Ingredient {
 
 interface GroceryGroup {
   recipeTitle: string;
+  recipeSlug: string;
   ingredients: GroceryItem[];
 }
 
 interface GroceryContextType {
   list: Record<string, GroceryGroup>;
-  addToCard: (recipeId: string, title: string, ingredients: Ingredient[]) => void;
+  addToCard: (recipeId: string, title: string, slug: string, ingredients: Ingredient[]) => void;
   toggleItem: (recipeId: string, itemId: string) => void;
   removeRecipe: (recipeId: string) => void;
   totalItems: number;
@@ -38,10 +39,11 @@ export function GroceryProvider({ children }: { children: React.ReactNode }) {
     localStorage.setItem('sale-pepe-grocery', JSON.stringify(newList));
   };
 
-  const addToCard = (recipeId: string, title: string, ingredients: Ingredient[]) => {
+  const addToCard = (recipeId: string, title: string, slug: string, ingredients: Ingredient[]) => {
     const newList = { ...list };
     newList[recipeId] = {
       recipeTitle: title,
+      recipeSlug: slug,
       ingredients: ingredients.map((ing, idx) => ({
         ...ing,
         checked: false,
