@@ -4,8 +4,8 @@ import "./globals.css";
 import Navbar from "@/components/Navbar";
 import TabBar from "@/components/TabBar";
 import ClientSideScrollRestorer from "@/ClientSideScrollRestorer";
-import { SavedRecipesProvider } from "@/context/SavedRecipesContext";
 import { Suspense } from "react";
+import { AppProviders } from "@/context";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -33,13 +33,13 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
   return (
     <html lang="en" className={poppins.variable}>
       <body className="font-sans antialiased">
-        <SavedRecipesProvider>
+        <AppProviders>
           <Navbar />
           <main className="min-h-screen pt-16 pb-20">
             {children}
           </main>
           <TabBar />
-        </SavedRecipesProvider>
+        </AppProviders>
       </body>
 
       <Suspense>

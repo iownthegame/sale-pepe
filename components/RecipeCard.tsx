@@ -3,6 +3,7 @@ import Image from "next/image";
 import { Clock, Users, ChevronRight, ChefHat } from "lucide-react"; // Added ChefHat
 import { Recipe } from "@/types/recipe";
 import RecipeSaveButton from "./RecipeSaveButton";
+import RecipeBasketButton from "./RecipeBasketButton";
 
 interface RecipeCardProps {
   recipe: Recipe;
@@ -11,9 +12,10 @@ interface RecipeCardProps {
 export default function RecipeCard({ recipe }: RecipeCardProps) {
   return (
     <div className="relative group">
-      {/* Save Button Overlay */}
-      <div className="absolute top-4 right-4 z-20">
+      {/* Action Buttons Overlay */}
+      <div className="absolute top-4 right-4 z-20 flex flex-col gap-2">
         <RecipeSaveButton id={recipe.id} />
+        <RecipeBasketButton recipe={recipe} />
       </div>
 
       <Link

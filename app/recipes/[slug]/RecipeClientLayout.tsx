@@ -9,6 +9,8 @@ import {
 import Image from "next/image";
 import RecipeEmbedVideo from "@/components/RecipeEmbedVideo";
 import { useSavedRecipes } from "@/hooks/useSavedRecipes";
+import RecipeSaveButton from "@/components/RecipeSaveButton";
+import RecipeBasketButton from "@/components/RecipeBasketButton";
 
 export default function RecipeClientLayout({ recipe }: { recipe: Recipe }) {
   const { toggleSave, isSaved } = useSavedRecipes();
@@ -97,16 +99,8 @@ export default function RecipeClientLayout({ recipe }: { recipe: Recipe }) {
               </div>
             </div>
 
-            <button
-              onClick={() => toggleSave(recipe.id)}
-              className="mt-2 p-4 rounded-full bg-background border border-foreground/10 shadow-xl hover:scale-105 active:scale-95 transition-all group"
-            >
-              {saved ? (
-                <BookmarkCheck className="text-foreground" size={24} fill="currentColor" />
-              ) : (
-                <Bookmark className="text-foreground/40 group-hover:text-foreground" size={24} />
-              )}
-            </button>
+            <RecipeSaveButton id={recipe.id} />
+            <RecipeBasketButton recipe={recipe} />
           </div>
 
           <p className="text-foreground/50 leading-relaxed">{recipe.description}</p>
