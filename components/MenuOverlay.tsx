@@ -1,6 +1,7 @@
 "use client";
-import { Utensils, ShoppingBasket, X, Sofa } from "lucide-react";
+import { Utensils, ShoppingBasket, X, Sofa, Terminal } from "lucide-react";
 import Link from "next/link";
+import DevHeartbeat from "./DevHeartbeat";
 
 interface MenuOverlayProps {
   isOpen: boolean;
@@ -19,18 +20,15 @@ export default function MenuOverlay({ isOpen, onClose }: MenuOverlayProps) {
       className={`fixed inset-0 z-[100] transition-opacity duration-500 ${isOpen ? "opacity-100 pointer-events-auto" : "opacity-0 pointer-events-none"
         }`}
     >
-      {/* Backdrop Blur Layer */}
       <div
         className="absolute inset-0 bg-background/40 backdrop-blur-md cursor-pointer"
         onClick={onClose}
       />
 
-      {/* Drawer Panel - Added h-screen and flex-col */}
       <div
         className={`absolute right-0 top-0 h-screen w-screen bg-background border-l border-foreground/10 p-8 pt-24 transition-transform duration-500 ease-out shadow-2xl flex flex-col ${isOpen ? "translate-x-0" : "translate-x-full"
           }`}
       >
-        {/* Close Button */}
         <button
           onClick={onClose}
           className="absolute top-4 right-6 p-2 text-foreground/60 hover:text-foreground transition-colors"
@@ -38,23 +36,46 @@ export default function MenuOverlay({ isOpen, onClose }: MenuOverlayProps) {
           <X size={24} />
         </button>
 
-        {/* Content Container - Crucial: h-full and flex-col allow mt-auto to work */}
-        <div className="flex flex-col h-full">
-          <nav className="space-y-6">
-            {menuItems.map((item) => (
+        <nav className="space-y-6">
+          {menuItems.map((item) => (
+            <Link
+              key={item.name}
+              href={item.href}
+              onClick={onClose}
+              className="flex items-center gap-4 text-xl font-medium text-foreground/70 hover:text-foreground transition-all group"
+            >
+              <span className="text-foreground/30 group-hover:text-foreground group-hover:scale-110 transition-all">
+                {item.icon}
+              </span>
+              {item.name}
+            </Link>
+          ))}
+        </nav>
+
+        {/* Added pb-24 to ensure the dev section sits comfortably
+          above your TabBar
+        */}
+        <div className="mt-auto pb-24 space-y-6">
+          <div className="border-t border-foreground/10 pt-6">
+            {/* Heading Replacement */}
+            <h4 className="text-[10px] font-black uppercase tracking-[0.3em] text-foreground/20 mb-4">
+              Back of House
+            </h4>
+
+            <div className="space-y-4">
+              <DevHeartbeat />
+
+              {/* Secret Dev Link */}
               <Link
-                key={item.name}
-                href={item.href}
+                href="/dev"
                 onClick={onClose}
-                className="flex items-center gap-4 text-xl font-medium text-foreground/70 hover:text-foreground transition-all group"
+                className="flex items-center gap-3 text-xs font-medium text-foreground/30 hover:text-foreground transition-colors group/dev"
               >
-                <span className="text-foreground/30 group-hover:text-foreground group-hover:scale-110 transition-all">
-                  {item.icon}
-                </span>
-                {item.name}
+                <Terminal size={14} />
+                <span>Test Kitchen</span>
               </Link>
-            ))}
-          </nav>
+            </div>
+          </div>
         </div>
       </div>
     </div>
