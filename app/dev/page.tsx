@@ -1,8 +1,6 @@
 "use client";
-import { Terminal, Trash2, Database, ArrowLeft, ChefHat } from "lucide-react";
-import Link from "next/link";
+import { Terminal, Trash2, Database } from "lucide-react";
 import { useGrocery } from "@/context/GroceryContext";
-import { useSavedRecipes } from "@/hooks/useSavedRecipes";
 // Assuming this is where your data lives
 import recipesData from "@/data/recipes.json";
 

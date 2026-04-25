@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { BookSearch, CookingPot, BookMarked, ShoppingBasket } from "lucide-react";
+import { BookSearch, CookingPot, BookMarked } from "lucide-react";
 import { cn } from "@/lib/utils";
 
 export default function TabBar() {

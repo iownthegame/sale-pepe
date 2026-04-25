@@ -21,7 +21,7 @@ export default function AboutPage() {
               Salepepe started in a small kitchen with a simple realization: why not combine our love for cooking and the technology we are learning to design and create a unique recipe experience?
               <br></br>
               <br></br>
-              We name it after Camilla's beloved puppies, Sale and Pepe, who always bring joy and warmth to us, just like good food does.
+              We name it after Camilla&apos;s beloved puppies, Sale and Pepe, who always bring joy and warmth to us, just like good food does.
             </p>
           </div>
 

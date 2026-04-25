@@ -22,7 +22,7 @@ export default function DevHeartbeat() {
           }),
           loading: false
         });
-      } catch (err) {
+      } catch {
         setStats(s => ({ ...s, loading: false }));
       }
     }

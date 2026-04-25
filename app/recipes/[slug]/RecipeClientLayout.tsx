@@ -1,26 +1,15 @@
 "use client";
-import { useState, useEffect } from "react";
 import { Recipe } from "@/types/recipe";
 import {
   Clock, Users, Flame, Utensils,
-  ListChecks, Bookmark, BookmarkCheck,
-  Instagram, ExternalLink, ChefHat,
+  ListChecks, Instagram, ExternalLink, ChefHat,
 } from "lucide-react";
 import Image from "next/image";
 import RecipeEmbedVideo from "@/components/RecipeEmbedVideo";
-import { useSavedRecipes } from "@/hooks/useSavedRecipes";
 import RecipeSaveButton from "@/components/RecipeSaveButton";
 import RecipeBasketButton from "@/components/RecipeBasketButton";
 
 export default function RecipeClientLayout({ recipe }: { recipe: Recipe }) {
-  const { toggleSave, isSaved } = useSavedRecipes();
-  const saved = isSaved(recipe.id);
-
-  const [hasMounted, setHasMounted] = useState(false);
-
-  // useEffect(() => {
-  //   setHasMounted(true);
-  // }, []);
 
   return (
     <div className="min-h-screen bg-background text-foreground pb-20">

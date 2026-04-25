@@ -30,8 +30,6 @@ export default function GroceryPage() {
         <div className="space-y-16">
           {recipeIds.map((id) => {
             const group = list[id];
-            const checkedCount = group.ingredients.filter(i => i.checked).length;
-            const progress = (checkedCount / group.ingredients.length) * 100;
 
             return (
               <section key={id} className="animate-in fade-in slide-in-from-bottom-8 duration-700">

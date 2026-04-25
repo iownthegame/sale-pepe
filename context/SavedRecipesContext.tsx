@@ -19,7 +19,7 @@ export function SavedRecipesProvider({ children }: { children: ReactNode }) {
     const stored = localStorage.getItem("saved-recipes");
     if (stored) {
       // eslint-disable-next-line react-hooks/set-state-in-effect
-      try { setSavedIds(JSON.parse(stored)); } catch (e) { }
+      try { setSavedIds(JSON.parse(stored)); } catch { }
     }
     setIsLoaded(true);
   }, []);
