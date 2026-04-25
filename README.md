@@ -97,6 +97,6 @@ NEXT_PUBLIC_GEMINI_API_KEY=your_key_here
 Install the project on your machine. Run the command below and open your browser to `localhost:3000`:
 
 ```bash
-npm install
-npm run dev
+bun install
+bun dev
 ```
