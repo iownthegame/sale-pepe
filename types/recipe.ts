@@ -23,7 +23,8 @@ export type Unit =
   | "tbsp"
   | "cup"
   | "pinch"
-  | "clove";
+  | "clove"
+  | "piece";
 
 export type Dietary =
   | "Vegan"

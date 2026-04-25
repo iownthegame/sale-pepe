@@ -752,5 +752,61 @@
       "type": "instagram",
       "embedId": "CriRzD0AfPJ"
     }
+  },
+  {
+    "id": "12",
+    "slug": "miso-ginger-salmon-crispy-rice-salad",
+    "title": "Miso-Ginger Salmon Crispy Rice Salad",
+    "description": "A nourishing, texture-packed salad with broiled miso-glazed salmon, golden sesame crispy rice, crunchy cabbage, and a bright ginger-orange dressing. One dressing does double duty as both glaze and vinaigrette.",
+    "sourceUrl": "https://www.instagram.com/reel/DW1UngcD8SE/",
+    "chef": {
+      "name": "Jamie Vespa",
+      "instagramUrl": "https://www.instagram.com/dishingouthealth/",
+      "websiteUrl": "https://dishingouthealth.com"
+    },
+    "servings": 4,
+    "mainImage": "https://dishingouthealth.com/wp-content/uploads/2026/04/SalmonCrispyRiceSalad_Square2.jpg",
+    "images": [],
+    "course": "Main",
+    "dietaries": ["Pescatarian", "Gluten-Free", "Dairy-Free"],
+    "categories": ["Asian", "Healthy"],
+    "duration": {
+      "prep": 20,
+      "cook": 40,
+      "total": 60
+    },
+    "ingredients": [
+      { "item": "Skin-on salmon fillets", "amount": 2, "unit": "piece" },
+      { "item": "Cooked and cooled long-grain rice (jasmine or red)", "amount": 3, "unit": "cup" },
+      { "item": "Tamari or soy sauce", "amount": 1, "unit": "tbsp" },
+      { "item": "Toasted sesame oil", "amount": 1, "unit": "tbsp" },
+      { "item": "Kosher salt", "amount": 0.5, "unit": "tsp" },
+      { "item": "Black pepper", "amount": 0.25, "unit": "tsp" },
+      { "item": "Napa cabbage, thinly sliced", "amount": 4, "unit": "cup" },
+      { "item": "Red cabbage, thinly sliced", "amount": 4, "unit": "cup" },
+      { "item": "Persian cucumbers, thinly sliced", "amount": 2, "unit": "piece" },
+      { "item": "Fresh cilantro, coarsely chopped", "amount": 0.5, "unit": "cup" },
+      { "item": "Toasted sesame seeds", "amount": 2, "unit": "tbsp" },
+      { "item": "Fresh orange juice (from 1-2 navel oranges)", "amount": 0.25, "unit": "cup" },
+      { "item": "Seasoned rice vinegar", "amount": 2, "unit": "tbsp" },
+      { "item": "White miso paste", "amount": 2, "unit": "tbsp" },
+      { "item": "Fresh ginger, peeled and sliced", "amount": 30, "unit": "g" },
+      { "item": "Garlic, thinly sliced", "amount": 2, "unit": "clove" },
+      { "item": "Honey", "amount": 1, "unit": "tbsp" },
+      { "item": "Toasted sesame oil (dressing)", "amount": 1, "unit": "tsp" },
+      { "item": "Avocado oil", "amount": 80, "unit": "ml" }
+    ],
+    "instructions": [
+      "Arrange two oven racks: one in the center and the other ~6 inches from the broiler. Preheat oven to 400°F (200°C).",
+      "Prepare rice: Empty chilled rice onto a large rimmed baking sheet lined with parchment. Add tamari and sesame oil, toss to coat, and spread in a thin layer. Roast on the center rack for 25–30 minutes, tossing once halfway, until crispy. Set aside to cool slightly.",
+      "Blend dressing: Combine orange juice, rice vinegar, miso paste, ginger, garlic, honey, sesame oil, and avocado oil in a jar and blend with an immersion blender (or countertop blender) until smooth.",
+      "Prepare salmon: Place salmon on a parchment-lined baking dish. Season with salt and pepper. Spoon 2 tablespoons of dressing over the fillets and brush to coat.",
+      "Broil salmon: Once rice is done, set broiler to HIGH. Place salmon on the top rack (~6 inches from broiler) and broil for 6–8 minutes, rotating the pan once, until opaque with a deep brown crust. Let cool slightly, then flake into large pieces and discard skin.",
+      "Assemble salad: In a large bowl, combine Napa cabbage, red cabbage, cucumbers, and cilantro. Season with a pinch of salt. Add crispy rice, flaked salmon, sesame seeds, and remaining dressing. Toss well to combine. Garnish with extra herbs and sesame seeds if desired. Serve at room temperature."
+    ],
+    "embed": {
+      "type": "instagram",
+      "embedId": "DW1UngcD8SE"
+    }
   }
 ]
