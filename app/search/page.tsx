@@ -25,7 +25,7 @@ export default function SearchPage() {
       const titleMatch = r.title?.toLowerCase().includes(query) ?? false;
 
       const ingredientMatch = r.ingredients?.some(i =>
-        i.name?.toLowerCase().includes(query)
+        i.item?.toLowerCase().includes(query)
       ) ?? false;
 
       return titleMatch || ingredientMatch;
