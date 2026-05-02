@@ -1,36 +1,33 @@
 "use client";
 import { useState, useMemo, useRef, useEffect } from "react";
-import recipesData from "@/data/recipes.json";
 import { Recipe } from "@/types/recipe";
 import RecipeCard from "@/components/RecipeCard";
+import { supabase, recipeFromDb } from "@/lib/supabase";
 
 export default function SearchPage() {
   const [searchQuery, setSearchQuery] = useState("");
+  const [recipes, setRecipes] = useState<Recipe[]>([]);
   const inputRef = useRef<HTMLInputElement>(null);
 
   useEffect(() => {
-    // A small delay (100ms) often helps if Next.js is still rendering the page
-    const timer = setTimeout(() => {
-      inputRef.current?.focus();
-    }, 100);
+    supabase.from("recipes").select("*").order("id").then(({ data }) => {
+      if (data) setRecipes(data.map(recipeFromDb));
+    });
+    const timer = setTimeout(() => inputRef.current?.focus(), 100);
     return () => clearTimeout(timer);
   }, []);
 
   const filteredRecipes = useMemo(() => {
     const query = searchQuery.toLowerCase().trim();
     if (!query) return [];
-
-    return (recipesData as Recipe[]).filter((r) => {
-      // Use ?. and ?? "" to handle missing titles or names
+    return recipes.filter((r) => {
       const titleMatch = r.title?.toLowerCase().includes(query) ?? false;
-
       const ingredientMatch = r.ingredients?.some(i =>
         i.item?.toLowerCase().includes(query)
       ) ?? false;
-
       return titleMatch || ingredientMatch;
     });
-  }, [searchQuery]);
+  }, [searchQuery, recipes]);
 
   return (
     <div className="flex flex-col gap-8 p-6 pb-12">
@@ -56,13 +53,13 @@ export default function SearchPage() {
       </div>
 
       <div className="mt-12">
-        {searchQuery.length > 0 ? (
+        {searchQuery.length > 0 && (
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {filteredRecipes.map((recipe) => (
               <RecipeCard key={recipe.id} recipe={recipe} />
             ))}
           </div>
-        ) : (null)}
+        )}
       </div>
     </div>
   );

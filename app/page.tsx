@@ -1,14 +1,13 @@
-import recipesData from "@/data/recipes.json";
 import { Recipe } from "@/types/recipe";
 import RecipeCard from "@/components/RecipeCard";
+import { supabase, recipeFromDb } from "@/lib/supabase";
 
-export default function Home() {
-  // Cast the JSON data to our Recipe array type
-  const recipes = recipesData as Recipe[];
+export default async function Home() {
+  const { data, error } = await supabase.from("recipes").select("*").order("id");
+  const recipes: Recipe[] = error ? [] : (data ?? []).map(recipeFromDb);
 
   return (
     <div className="flex flex-col gap-8 p-6 pb-12">
-      {/* Header Section */}
       <header className="space-y-1">
         <h1 className="text-3xl font-bold tracking-tight text-foreground">
           Our secret recipes
@@ -18,7 +17,6 @@ export default function Home() {
         </p>
       </header>
 
-      {/* Recipe Grid */}
       <section className="grid gap-6">
         {recipes.map((recipe) => (
           <RecipeCard

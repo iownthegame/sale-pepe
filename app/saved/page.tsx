@@ -1,20 +1,24 @@
 "use client";
 
-import recipesData from "@/data/recipes.json";
+import { useEffect, useState } from "react";
 import { Recipe } from "@/types/recipe";
 import RecipeCard from "@/components/RecipeCard";
 import { useSavedRecipes } from "@/hooks/useSavedRecipes";
+import { supabase, recipeFromDb } from "@/lib/supabase";
 import { Bookmark } from "lucide-react";
 
 export default function SavedPage() {
-  const allRecipes = recipesData as Recipe[];
+  const [allRecipes, setAllRecipes] = useState<Recipe[]>([]);
   const { isSaved, isLoaded } = useSavedRecipes();
 
-  // Filter the JSON data based on the IDs in localStorage
+  useEffect(() => {
+    supabase.from("recipes").select("*").then(({ data }) => {
+      if (data) setAllRecipes(data.map(recipeFromDb));
+    });
+  }, []);
+
   const savedRecipes = allRecipes.filter((recipe) => isSaved(recipe.id));
 
-  // Hydration Guard: Prevents the page from flickering or showing
-  // the empty state before localStorage is read.
   if (!isLoaded) {
     return (
       <div className="p-6 flex flex-col gap-8">
@@ -39,7 +43,6 @@ export default function SavedPage() {
           ))}
         </section>
       ) : (
-        /* Empty State */
         <div className="flex flex-col items-center justify-center py-20 text-center space-y-4">
           <div className="p-6 rounded-full bg-foreground/5 text-gray-400">
             <Bookmark size={40} />
