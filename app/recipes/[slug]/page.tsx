@@ -1,17 +1,35 @@
+"use client";
+
+import { use, useEffect, useState } from "react";
 import { notFound } from "next/navigation";
+import { Recipe } from "@/types/recipe";
 import RecipeClientLayout from "./RecipeClientLayout";
 import { supabase, recipeFromDb } from "@/lib/supabase";
 
-export default async function RecipePage({ params }: { params: Promise<{ slug: string }> }) {
-  const { slug } = await params;
+export default function RecipePage({ params }: { params: Promise<{ slug: string }> }) {
+  const { slug } = use(params);
+  const [recipe, setRecipe] = useState<Recipe | null>(null);
+  const [notFoundState, setNotFoundState] = useState(false);
 
-  const { data, error } = await supabase
-    .from("recipes")
-    .select("*")
-    .eq("slug", slug)
-    .single();
+  useEffect(() => {
+    supabase
+      .from("recipes")
+      .select("*")
+      .eq("slug", slug)
+      .single()
+      .then(({ data, error }) => {
+        if (error || !data) {
+          setNotFoundState(true);
+        } else {
+          setRecipe(recipeFromDb(data));
+        }
+      });
+  }, [slug]);
 
-  if (error || !data) return notFound();
+  if (notFoundState) return notFound();
+  if (!recipe) return (
+    <div className="min-h-screen bg-background animate-pulse" />
+  );
 
-  return <RecipeClientLayout recipe={recipeFromDb(data)} />;
+  return <RecipeClientLayout recipe={recipe} />;
 }

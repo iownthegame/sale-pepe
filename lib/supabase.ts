@@ -20,7 +20,7 @@ export function recipeFromDb(row: any): Recipe {
       websiteUrl: row.chef_website ?? undefined,
     },
     servings: row.servings,
-    mainImage: row.main_image ?? "",
+    mainImage: (row.main_image ?? "").replace(/^\/sale-pepe/, ""),
     images: row.images ?? [],
     course: row.course,
     dietaries: row.dietaries ?? [],

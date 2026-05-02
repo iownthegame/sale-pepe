@@ -1,10 +1,18 @@
+"use client";
+
+import { useEffect, useState } from "react";
 import { Recipe } from "@/types/recipe";
 import RecipeCard from "@/components/RecipeCard";
 import { supabase, recipeFromDb } from "@/lib/supabase";
 
-export default async function Home() {
-  const { data, error } = await supabase.from("recipes").select("*").order("id");
-  const recipes: Recipe[] = error ? [] : (data ?? []).map(recipeFromDb);
+export default function Home() {
+  const [recipes, setRecipes] = useState<Recipe[]>([]);
+
+  useEffect(() => {
+    supabase.from("recipes").select("*").order("id").then(({ data }) => {
+      if (data) setRecipes(data.map(recipeFromDb));
+    });
+  }, []);
 
   return (
     <div className="flex flex-col gap-8 p-6 pb-12">
