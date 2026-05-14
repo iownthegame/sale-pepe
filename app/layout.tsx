@@ -3,6 +3,7 @@ import { Poppins } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/components/Navbar";
 import TabBar from "@/components/TabBar";
+import IntroSplash from "@/components/IntroSplashWrapper";
 import ClientSideScrollRestorer from "@/ClientSideScrollRestorer";
 import { Suspense } from "react";
 import { AppProviders } from "@/context";
@@ -23,6 +24,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
     <html lang="en" className={poppins.variable}>
       <body className="font-sans antialiased">
         <AppProviders>
+          <IntroSplash />
           <Navbar />
           <main className="min-h-screen pt-16 pb-20">
             <div className="max-w-2xl mx-auto">

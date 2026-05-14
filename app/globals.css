@@ -28,6 +28,16 @@ body {
   font-family: var(--font-poppins), ui-sans-serif, system-ui;
 }
 
+@keyframes kenburns {
+  from { transform: scale(1); }
+  to { transform: scale(1.08); }
+}
+
+@keyframes fadein {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
 @layer base {
   html {
     /* This tells the browser: "I'll handle the scroll, don't try to be helpful" */

@@ -1,11 +1,17 @@
 "use client";
 import { Terminal, Trash2, Database } from "lucide-react";
 import { useGrocery } from "@/context/GroceryContext";
-// Assuming this is where your data lives
+import { useEffect, useState } from "react";
 import recipesData from "@/data/recipes.json";
 
 export default function DevToolsPage() {
   const { list } = useGrocery();
+  const [localStorageSize, setLocalStorageSize] = useState("0 bytes");
+
+  useEffect(() => {
+    const size = `${JSON.stringify(localStorage).length} bytes`;
+    setTimeout(() => setLocalStorageSize(size), 0);
+  }, []);
 
   const getSavedCount = () => {
     if (typeof window === 'undefined') return 0;
@@ -29,7 +35,7 @@ export default function DevToolsPage() {
     { label: "Total Recipes", value: recipesData.length }, // New Stat
     { label: "Saved Recipes", value: getSavedCount() },
     { label: "Grocery Dishes", value: Object.keys(list).length },
-    { label: "Local Storage Used", value: typeof window !== 'undefined' ? `${JSON.stringify(localStorage).length} bytes` : '0' },
+    { label: "Local Storage Used", value: localStorageSize },
   ];
 
   return (

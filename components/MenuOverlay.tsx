@@ -52,12 +52,8 @@ export default function MenuOverlay({ isOpen, onClose }: MenuOverlayProps) {
           ))}
         </nav>
 
-        {/* Added pb-24 to ensure the dev section sits comfortably
-          above your TabBar
-        */}
         <div className="mt-auto pb-24 space-y-6">
           <div className="border-t border-foreground/10 pt-6">
-            {/* Heading Replacement */}
             <h4 className="text-[10px] font-black uppercase tracking-[0.3em] text-foreground/20 mb-4">
               Back of House
             </h4>
@@ -65,7 +61,6 @@ export default function MenuOverlay({ isOpen, onClose }: MenuOverlayProps) {
             <div className="space-y-4">
               <DevHeartbeat />
 
-              {/* Secret Dev Link */}
               <Link
                 href="/dev"
                 onClick={onClose}
