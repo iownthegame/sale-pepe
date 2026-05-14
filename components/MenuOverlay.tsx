@@ -1,7 +1,9 @@
 "use client";
-import { Utensils, ShoppingBasket, X, Sofa, Terminal } from "lucide-react";
+import { Utensils, ShoppingBasket, X, Sofa, Terminal, LogIn, LogOut } from "lucide-react";
+import Image from "next/image";
 import Link from "next/link";
 import DevHeartbeat from "./DevHeartbeat";
+import { useAuth } from "@/context/AuthContext";
 
 interface MenuOverlayProps {
   isOpen: boolean;
@@ -9,6 +11,7 @@ interface MenuOverlayProps {
 }
 
 export default function MenuOverlay({ isOpen, onClose }: MenuOverlayProps) {
+  const { user, signInWithGoogle, signOut } = useAuth();
   const menuItems = [
     { name: "Recipes", href: "/", icon: <Utensils size={20} /> },
     { name: "Grocery list", href: "/grocery", icon: <ShoppingBasket size={20} /> },
@@ -53,6 +56,40 @@ export default function MenuOverlay({ isOpen, onClose }: MenuOverlayProps) {
         </nav>
 
         <div className="mt-auto pb-24 space-y-6">
+          <div className="border-t border-foreground/10 pt-6">
+            {user ? (
+              <div className="space-y-3">
+                <div className="flex items-center gap-3">
+                  {user.user_metadata?.avatar_url && (
+                    <Image
+                      src={user.user_metadata.avatar_url}
+                      alt={user.user_metadata?.full_name ?? ""}
+                      width={36}
+                      height={36}
+                      className="rounded-full"
+                    />
+                  )}
+                  <div>
+                    <p className="text-sm font-semibold text-foreground/80">{user.user_metadata?.full_name}</p>
+                    <p className="text-xs text-foreground/40 truncate">{user.email}</p>
+                  </div>
+                </div>
+                <button
+                  onClick={() => { signOut(); onClose(); }}
+                  className="flex items-center gap-3 text-sm font-medium text-foreground/60 hover:text-foreground transition-colors"
+                >
+                  <LogOut size={16} /> Sign out
+                </button>
+              </div>
+            ) : (
+              <button
+                onClick={() => { signInWithGoogle(); onClose(); }}
+                className="flex items-center gap-3 text-sm font-medium text-foreground/60 hover:text-foreground transition-colors"
+              >
+                <LogIn size={16} /> Sign in with Google
+              </button>
+            )}
+          </div>
           <div className="border-t border-foreground/10 pt-6">
             <h4 className="text-[10px] font-black uppercase tracking-[0.3em] text-foreground/20 mb-4">
               Back of House
