@@ -28,6 +28,7 @@ Create `.env.local` with the local keys (printed by `supabase start`):
 ```
 NEXT_PUBLIC_SUPABASE_URL=http://127.0.0.1:54321
 NEXT_PUBLIC_SUPABASE_ANON_KEY=<local anon key>
+SUPABASE_AUTH_EXTERNAL_GOOGLE_SECRET=<google oauth secret>
 ```
 
 Then run `bun dev`.
@@ -64,14 +65,24 @@ The `types/recipe.ts` file defines the full schema. Key type detail: ingredients
 
 To add a new recipe use the `/import-recipe` Claude skill or the `/dev` page (uses Gemini AI, requires `NEXT_PUBLIC_GEMINI_API_KEY` in `.env.local`).
 
+### Auth
+
+Google OAuth via Supabase. `context/AuthContext.tsx` exposes `useAuth()` with `user`, `signInWithGoogle()`, and `signOut()`. Auth state is available app-wide via `<AuthProvider>` in `context/index.tsx`.
+
+Access levels:
+- **Unauthenticated** — browse recipes, search, save to localStorage, grocery list
+- **Logged-in** — above + add/view cook logs
+- **Editor** (`is_editor = true` in `profiles`) — above + add/edit recipes
+
+Google OAuth client ID is in `supabase/config.toml`. The secret goes in `.env.local` as `SUPABASE_AUTH_EXTERNAL_GOOGLE_SECRET` (local) and directly in the Supabase dashboard (production).
+
 ### State
 
-Two React contexts handle all runtime state, both persisted to `localStorage`:
+Three React contexts in `context/index.tsx` as `<AppProviders>`:
 
-- `SavedRecipesContext` — tracks saved recipe IDs (`saved-recipes` key)
-- `GroceryContext` — tracks grocery list grouped by recipe ID (`sale-pepe-grocery` key)
-
-Both are composed in `context/index.tsx` as `<AppProviders>` and mounted in `app/layout.tsx`.
+- `AuthContext` — current user session via Supabase auth
+- `SavedRecipesContext` — saved recipe IDs persisted to `localStorage` (`saved-recipes` key)
+- `GroceryContext` — grocery list grouped by recipe ID, persisted to `localStorage` (`sale-pepe-grocery` key)
 
 ### Routing
 
