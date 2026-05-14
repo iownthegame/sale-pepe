@@ -13,7 +13,8 @@ export default function Navbar() {
   const router = useRouter();
 
   return (
-    <nav className="fixed top-0 left-0 right-0 h-16 border-b border-white/10 bg-background grid grid-cols-3 items-center px-6 z-50">
+    <nav className="fixed top-0 left-0 right-0 h-16 border-b border-white/10 bg-background z-50">
+      <div className="max-w-2xl mx-auto h-full grid grid-cols-3 items-center px-6">
 
       <div className="flex justify-start">
         {!isHome && (
@@ -44,7 +45,8 @@ export default function Navbar() {
         </button>
       </div>
 
-      <MenuOverlay isOpen={isMenuOpen} onClose={() => setIsMenuOpen(false)} />
-    </nav >
+        <MenuOverlay isOpen={isMenuOpen} onClose={() => setIsMenuOpen(false)} />
+      </div>
+    </nav>
   );
 }

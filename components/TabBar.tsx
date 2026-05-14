@@ -18,7 +18,7 @@ export default function TabBar() {
 
   return (
     <nav className="fixed bottom-0 left-0 right-0 h-20 border-t border-white/10 bg-background pb-0 z-50">
-      <div className="flex h-full items-center justify-around px-4">
+      <div className="max-w-2xl mx-auto flex h-full items-center justify-around px-4">
         {tabs.map((tab) => {
           const isActive = pathname === tab.href || pathname === `${tab.href}/`;
           const Icon = tab.icon;
