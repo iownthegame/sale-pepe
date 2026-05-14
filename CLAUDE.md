@@ -6,22 +6,63 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ```bash
 bun dev        # start local dev server at localhost:3000
-bun build      # static export build (outputs to ./out)
+bun build      # production build
 bun lint       # run ESLint
 bun add <pkg>  # install a package
 ```
 
 The pre-commit hook runs `bun lint` automatically via husky — commits will be blocked if lint fails.
 
+## Local Development
+
+Requires a running Supabase instance. Start the local stack (requires Docker):
+
+```bash
+supabase start        # starts local Supabase at http://127.0.0.1:54321
+supabase db reset     # applies migrations and resets data
+bun supabase/seed.ts  # seeds recipes from data/recipes.json
+```
+
+Create `.env.local` with the local keys (printed by `supabase start`):
+
+```
+NEXT_PUBLIC_SUPABASE_URL=http://127.0.0.1:54321
+NEXT_PUBLIC_SUPABASE_ANON_KEY=<local anon key>
+```
+
+Then run `bun dev`.
+
+## Production
+
+- **Frontend**: Vercel — pushes to `main` auto-deploy to `salepepe.nl`
+- **Database**: Hosted Supabase project at `xaueopasgjpeooadbhbb.supabase.co`
+
+To push schema changes to production:
+
+```bash
+supabase link --project-ref xaueopasgjpeooadbhbb
+supabase db push
+```
+
+To reseed production recipes:
+
+```bash
+SUPABASE_URL=https://xaueopasgjpeooadbhbb.supabase.co SUPABASE_SERVICE_KEY=<secret key> bun supabase/seed.ts
+```
+
 ## Architecture
 
-SalePepe is a **fully static Next.js app** exported to GitHub Pages (`output: 'export'`, `basePath: '/sale-pepe'`). There is no backend, no database, and no API routes.
+SalePepe is a **Next.js app** (App Router, no static export) backed by Supabase. All data fetching happens client-side using the Supabase JS client with RLS enforcing access control.
 
 ### Data
 
-All recipe data lives in `data/recipes.json`. The `types/recipe.ts` file defines the full schema. Key type detail: ingredients use `item` (not `name`) for the ingredient string field.
+Recipe data is stored in the `recipes` table in Supabase. `data/recipes.json` is the seed source — it is no longer the runtime source of truth.
 
-To add a new recipe, paste the raw text or URL into the `/dev` page — it uses Gemini AI (requires `NEXT_PUBLIC_GEMINI_API_KEY` in `.env.local`) to produce structured JSON, which you then copy manually into `recipes.json`.
+The `types/recipe.ts` file defines the full schema. Key type detail: ingredients use `item` (not `name`) for the ingredient string field.
+
+`lib/supabase.ts` exports the Supabase client and `recipeFromDb()` which maps DB rows to the `Recipe` type. Local image paths have `/sale-pepe/` stripped in `recipeFromDb` (leftover from the old GitHub Pages basePath).
+
+To add a new recipe use the `/import-recipe` Claude skill or the `/dev` page (uses Gemini AI, requires `NEXT_PUBLIC_GEMINI_API_KEY` in `.env.local`).
 
 ### State
 
@@ -43,6 +84,10 @@ Both are composed in `context/index.tsx` as `<AppProviders>` and mounted in `app
 | `/grocery` | Grocery list |
 | `/dev` | AI recipe importer + debug tools (dev only) |
 
-### Deployment
+### Database
 
-Pushing to `main` triggers the GitHub Actions workflow (`.github/workflows/nextjs.yml`) which builds with bun and deploys the `./out` directory to GitHub Pages.
+Schema is in `supabase/migrations/20260425123209_init_recipes.sql`. Tables:
+
+- `recipes` — public read, editor-only write
+- `profiles` — extends `auth.users`, has `is_editor` flag
+- `cook_logs` — scoped to `user_id` via RLS
