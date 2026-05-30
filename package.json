@@ -7,7 +7,8 @@
     "build": "next build",
     "start": "next start",
     "lint": "eslint",
-    "prepare": "husky"
+    "prepare": "husky",
+    "db:reset": "supabase db reset && bun supabase/seed.ts"
   },
   "dependencies": {
     "@supabase/ssr": "^0.10.3",
